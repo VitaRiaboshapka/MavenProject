@@ -18,4 +18,7 @@ public class AJAXDataPage extends BasePage{
     public void clickOnLabelText() {
         driver.findElement(loadedLabel).click();
     }
+    public String getTextFromLabel() {
+        return driver.findElement(loadedLabel).getText();
+    }
 }

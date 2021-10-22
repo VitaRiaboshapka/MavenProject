@@ -1,5 +1,6 @@
 package tests_automation_playground;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -20,6 +21,9 @@ public class TestsForAJAXPage extends BaseTest {
         driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
         ajaxDataPage.clickAndWait();
         ajaxDataPage.clickOnLabelText();
+        String text = ajaxDataPage.getTextFromLabel();
+        System.out.println(text);
+        Assert.assertEquals("Data loaded with AJAX get request.",text);
     }
     @AfterTest
     public void tearDown() {
