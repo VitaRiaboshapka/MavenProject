@@ -21,4 +21,7 @@ public class ScrollbarsPage extends BasePage {
         driver.findElement(blueButton).click();
         return this;
     }
+    public String takeText() {
+     return driver.findElement(blueButton).getText();
+    }
 }

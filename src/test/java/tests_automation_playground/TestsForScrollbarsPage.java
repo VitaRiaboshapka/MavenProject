@@ -1,5 +1,6 @@
 package tests_automation_playground;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -18,6 +19,8 @@ public class TestsForScrollbarsPage extends BaseTest {
     public void clickOnHiddenButton() {
         scrollbarsPage.scrollTo();
         scrollbarsPage.clickButton();
+       String text = scrollbarsPage.takeText();
+        Assert.assertEquals(text,"Hiding Button");
     }
 
     @AfterTest
