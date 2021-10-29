@@ -8,6 +8,7 @@ import pages_automation_playground.VisibilityPage;
 
 public class TestsForVisibilityPage extends BaseTest {
     private VisibilityPage visibilityPage;
+
     @BeforeTest
     public void setUp() {
         super.setUp();
