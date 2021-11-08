@@ -7,19 +7,22 @@ import org.testng.annotations.Test;
 import pages_automation_playground.VerifyTextPage;
 
 public class TestsForVerifyTextPage extends BaseTest {
-    private  VerifyTextPage verifyTextPage;
+
+    private VerifyTextPage verifyTextPage;
 
     @BeforeTest
     public void setUp() {
         super.setUp();
-        driver.get("http://www.uitestingplayground.com/verifytext");
+        driver.get(baseUrl+"verifytext");
         verifyTextPage = new VerifyTextPage(driver);
     }
+
     @Test
     public void verifyText() {
-       String text =  verifyTextPage.takeText();
-        Assert.assertEquals(text,"Welcome UserName!");
+        String text = verifyTextPage.takeText();
+        Assert.assertEquals(text, "Welcome UserName!");
     }
+
     @AfterTest
     public void tearDown() {
         super.tearDown();

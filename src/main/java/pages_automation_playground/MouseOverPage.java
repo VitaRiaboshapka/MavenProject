@@ -13,7 +13,7 @@ public class MouseOverPage extends BasePage {
     By number = By.id("clickCount");
 
     public void clickOnButtonTwoTimes() {
-      driver.findElement(clickButton).click();
+        driver.findElement(clickButton).click();
     }
 
     public String numberChanges() {

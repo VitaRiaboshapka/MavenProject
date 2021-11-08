@@ -7,11 +7,12 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 import pages_automation_playground.HomePage;
-
 import java.util.concurrent.TimeUnit;
 
 public class TestsForHomePage {
+
     public static ChromeDriver driver;
+
     public String baseUrl = "http://www.uitestingplayground.com/";
 
     @BeforeSuite
@@ -21,12 +22,14 @@ public class TestsForHomePage {
         driver.manage().window().maximize();
         driver.get(baseUrl);
     }
+
     @Test(priority = 1)
-     public void goToLoadDelay() {
+    public void goToLoadDelay() {
         HomePage searchObj = new HomePage(driver);
-        driver.manage().timeouts().implicitlyWait(40,TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
         searchObj.clickLink();
     }
+
     @Test(priority = 2)
     public void clickButtonAppearingAfterDelay() {
         HomePage searchObj = new HomePage(driver);

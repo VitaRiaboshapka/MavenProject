@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 import pages_automation_playground.DynamicTablePage;
 
 public class TestsForDynamicTablePage {
+
     public static ChromeDriver driver;
 
     @BeforeSuite
@@ -22,17 +23,14 @@ public class TestsForDynamicTablePage {
     @Test
     public static void compareCpu() {
         DynamicTablePage getCpuValue = new DynamicTablePage(driver);
-
         String fromTable = String.valueOf(getCpuValue.getValueFromTable());
         String fromField = String.valueOf(getCpuValue.getChromeCpu());
-
-        Assert.assertEquals(fromTable,fromField);
-
-        }
+        Assert.assertEquals(fromTable, fromField);
+    }
 
     @AfterSuite
     public void tearDown() {
         driver.quit();
     }
-    }
+}
 

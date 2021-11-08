@@ -4,11 +4,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class DynamicTablePage {
+
     WebDriver driver;
 
     public DynamicTablePage(WebDriver driver) {
         this.driver = driver;
     }
+
     By dynamicTableCpu = By.xpath("//span[text()='Chrome']/following-sibling::span[contains(text(),'%')]");
     By chromeCpu = By.xpath("//p[contains(text(),'%')]");
 
@@ -21,8 +23,4 @@ public class DynamicTablePage {
         driver.findElement(chromeCpu).getText();
         return this;
     }
-
-
-
-
 }

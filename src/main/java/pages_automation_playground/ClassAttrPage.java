@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class ClassAttrPage extends BasePage {
 
-    public ClassAttrPage (WebDriver driver) {
+    public ClassAttrPage(WebDriver driver) {
         super(driver);
     }
 
@@ -15,5 +15,4 @@ public class ClassAttrPage extends BasePage {
         driver.findElement(blueButton).click();
         return this;
     }
-
 }

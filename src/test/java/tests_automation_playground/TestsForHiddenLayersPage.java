@@ -7,20 +7,22 @@ import org.testng.annotations.Test;
 import pages_automation_playground.HiddenLayersPage;
 
 public class TestsForHiddenLayersPage extends BaseTest {
+
     private HiddenLayersPage hiddenLayersPage;
 
     @BeforeTest
     public void setUp() {
         super.setUp();
-        driver.get("http://www.uitestingplayground.com/hiddenlayers");
+        driver.get(baseUrl+"hiddenlayers");
         hiddenLayersPage = new HiddenLayersPage(driver);
     }
-    @Test
-    public void clickButton() {
-        hiddenLayersPage.clickGreenButton();
-        Boolean present = hiddenLayersPage.isNotPresent();
-        Assert.assertEquals(present,present);
 
+    @Test (priority = 1)
+    public void clickButton() {
+        String colorBefore = hiddenLayersPage.getColorOfButton();
+        hiddenLayersPage.clickGreenButton();
+        String colorAfter = hiddenLayersPage.getColorOfButton();
+        Assert.assertEquals(colorAfter,colorBefore);
     }
 
     @AfterTest

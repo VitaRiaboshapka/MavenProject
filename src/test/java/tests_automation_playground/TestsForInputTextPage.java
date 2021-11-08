@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 import pages_automation_playground.InputTextPage;
 
 public class TestsForInputTextPage {
+
     public static ChromeDriver driver;
 
     @BeforeSuite
@@ -26,7 +27,6 @@ public class TestsForInputTextPage {
         String before = searchObj.checkTextOfButtonBeforeClick();
         searchObj.clickButtonUnderField();
         String after = searchObj.checkTextButtonAfterClick();
-
         Assert.assertNotEquals(before, after);
     }
 
