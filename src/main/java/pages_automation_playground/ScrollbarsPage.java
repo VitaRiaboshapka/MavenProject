@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class ScrollbarsPage extends BasePage {
+
     public ScrollbarsPage(WebDriver driver) {
         super(driver);
     }
@@ -17,11 +18,13 @@ public class ScrollbarsPage extends BasePage {
         ((JavascriptExecutor) driver).executeScript(
                 "arguments[0].scrollIntoView();", element1);
     }
+
     public ScrollbarsPage clickButton() {
         driver.findElement(blueButton).click();
         return this;
     }
+
     public String takeText() {
-     return driver.findElement(blueButton).getText();
+        return driver.findElement(blueButton).getText();
     }
 }

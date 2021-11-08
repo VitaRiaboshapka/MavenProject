@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import pages_automation_playground.DynamicIdPage;
 
 public class TestsForDynamicIdPage {
+
     public static ChromeDriver driver;
 
     @BeforeSuite

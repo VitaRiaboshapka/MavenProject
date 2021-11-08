@@ -7,12 +7,13 @@ import org.testng.annotations.Test;
 import pages_automation_playground.NonBreakingSpacePage;
 
 public class TestsForNonBreakingPage extends BaseTest {
+
     private NonBreakingSpacePage nonBreakingSpacePage;
 
     @BeforeTest
     public void setUp() {
         super.setUp();
-        driver.get("http://www.uitestingplayground.com/nbsp");
+        driver.get(baseUrl+"nbsp");
         nonBreakingSpacePage = new NonBreakingSpacePage(driver);
     }
 
@@ -20,8 +21,9 @@ public class TestsForNonBreakingPage extends BaseTest {
     public void clickButton() {
         nonBreakingSpacePage.clickMyButton();
         String text = nonBreakingSpacePage.getText();
-        Assert.assertEquals(text,"My Button");
+        Assert.assertEquals(text, "My Button");
     }
+
     @AfterTest
     public void tearDown() {
         super.tearDown();

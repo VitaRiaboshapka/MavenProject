@@ -1,11 +1,10 @@
 package tests_automation_playground;
 
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
-import pages_automation_playground.HomePage;
 import pages_automation_playground.LoadDelays;
 
 public class TestsForLoadDelayPage extends BaseTest {
+
     private LoadDelays loadDelays;
 
     @BeforeTest

@@ -7,14 +7,16 @@ import org.testng.annotations.Test;
 import pages_automation_playground.VisibilityPage;
 
 public class TestsForVisibilityPage extends BaseTest {
+
     private VisibilityPage visibilityPage;
 
     @BeforeTest
     public void setUp() {
         super.setUp();
-        driver.get("http://www.uitestingplayground.com/visibility");
+        driver.get(baseUrl+"visibility");
         visibilityPage = new VisibilityPage(driver);
     }
+
     @Test
     public void checkVisibility() {
         visibilityPage.clickHideButton();
@@ -26,6 +28,7 @@ public class TestsForVisibilityPage extends BaseTest {
         Assert.assertFalse(visibilityPage.checkOffScreenButton());
         Assert.assertFalse(visibilityPage.checkZeroWidth());
     }
+
     @AfterTest
     public void tearDown() {
         super.tearDown();

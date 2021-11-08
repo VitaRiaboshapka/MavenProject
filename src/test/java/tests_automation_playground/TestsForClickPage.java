@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 import pages_automation_playground.ClickPage;
 
 public class TestsForClickPage {
+
     public static ChromeDriver driver;
 
     @BeforeSuite
@@ -23,11 +24,8 @@ public class TestsForClickPage {
     public static void clickWorks() {
         ClickPage searchObj = new ClickPage(driver);
         String before = searchObj.checkColorBeforeClick();
-                        searchObj.clickButtonWorks();
+        searchObj.clickButtonWorks();
         String after = searchObj.checkColorAfterClick();
-        System.out.println(before);
-        System.out.println(after);
-
         Assert.assertNotEquals(before, after);
     }
 

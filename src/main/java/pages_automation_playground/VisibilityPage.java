@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 public class VisibilityPage extends BasePage {
+
     public VisibilityPage(WebDriver driver) {
         super(driver);
     }
@@ -25,7 +26,7 @@ public class VisibilityPage extends BasePage {
 
     public Boolean checkRemovedButton() {
         List<WebElement> buttons = driver.findElements(removedButton);
-        if (buttons.size() > 0 && buttons.get(0).isDisplayed()) {
+        if (buttons.size() > 0 && buttons.get(0).isEnabled()) {
             return true;
         }
         return false;
@@ -33,7 +34,7 @@ public class VisibilityPage extends BasePage {
 
     public Boolean checkOverlappedButton() {
         List<WebElement> buttons = driver.findElements(overlappedButton);
-        if (buttons.size() > 0 && buttons.get(0).isDisplayed()) {
+        if (buttons.size() > 0 && buttons.get(0).isEnabled()) {
             return true;
         }
         return false;
@@ -46,6 +47,7 @@ public class VisibilityPage extends BasePage {
         }
         return false;
     }
+
     public Boolean checkVisibilityHiddenButton() {
         List<WebElement> buttons = driver.findElements(visibilityHiddenButton);
         if (buttons.size() > 0 && buttons.get(0).isDisplayed()) {
@@ -53,6 +55,7 @@ public class VisibilityPage extends BasePage {
         }
         return false;
     }
+
     public Boolean checkDisplayNoneButton() {
         List<WebElement> buttons = driver.findElements(displayNoneButton);
         if (buttons.size() > 0 && buttons.get(0).isDisplayed()) {
@@ -60,6 +63,7 @@ public class VisibilityPage extends BasePage {
         }
         return false;
     }
+
     public Boolean checkOffScreenButton() {
         List<WebElement> buttons = driver.findElements(offScreenButton);
         if (buttons.size() > 0 && buttons.get(0).isDisplayed()) {
@@ -67,6 +71,7 @@ public class VisibilityPage extends BasePage {
         }
         return false;
     }
+
     public Boolean checkZeroWidth() {
         List<WebElement> buttons = driver.findElements(zeroWidthButton);
         if (buttons.size() > 0 && buttons.get(0).isDisplayed()) {
@@ -74,7 +79,7 @@ public class VisibilityPage extends BasePage {
         }
         return false;
     }
-    }
+}
 
 
 
